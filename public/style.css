@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: bisque;
+}
+
+nav{
+    background-color: rgb(121, 94, 51);
+    text-decoration: none;
+}
+
+nav>ul {
+    margin: 0;
+    color: #0d100f;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+nav>ul>li {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    min-width: 150px;
+}
+
+nav>ul>li:hover {
+    background-color: burlywood;
+    color: black;
+}
+
+.bok {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+}
