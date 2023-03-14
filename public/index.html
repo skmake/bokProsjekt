@@ -10,21 +10,44 @@
 
     <h1>Forfattere</h1>
 
-    <div id="info"></div>
+    <div id="forfattere">
+        
+    </div>
     
     <script>
-        const info = document.getElementById("info")
+        const forfattere = document.getElementById("forfattere")
 
         async function getInfo() {
             const author = await fetch("/forfattere");
             const info = await author.json()
 
             console.log(info)
+
+
             
             //Her bruker vi dataene til å endre HTMLen.
+
+            for (const author of info) {
+                const container = document.createElement("div")
+
+                const overskrift = document.createElement("h1")
+
+                const bilde = document.createElement("img")
+
+                overskrift.innerHTML = author.author;
+                bilde.src = "img/authors/" + author.img;
+
+                container.appendChild(overskrift)
+                container.appendChild(bilde)
+
+                forfattere.appendChild(container)
+            }
+
+
         }
 
-        getInfo()       
+        getInfo()
+        
         
     </script>
 
