@@ -5,7 +5,7 @@ const path = require("path")
 
 const app = express()
 
-//Lag en nettside som har en meny som viser alle forfattere i databasen. Når en trykker på en forfatter, skal en få opp alle bøkene til forfatteren (som ligger i databasen)
+//Lag en nettside viser informasjon om forfattere og bøkene deres. Bruk så mye data fra databsen du klarer. 
 
 
 app.use(express.static(path.join(__dirname + "/public")))
