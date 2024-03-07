@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/showbooks.html" id="Home">Se Bøker & Forfattre</a>
+        <a href="/" id="Home">Hjem</a>
+
+
+        </nav>
+
+    <form id="addBookForm">
+       
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="bookImage">Book Image:</label><br>
+        <input type="file" id="bookImage" name="bookImage" required><br>
+
+        <label for="pages">Pages:</label><br>
+        <input type="text" id="pages" name="pages" required><br>
+
+        <label for="genre">Summary:</label><br>
+        <input type="text" id="summary" name="summary" required><br>
+
+        <label for="numGenres">Number of Genres:</label><br>
+        <input type="number" id="numGenres" name="numGenres" min="1" onchange="createGenreInputs()" required><br>
+        <div id="genreInputs"></div>
+
+        <label for="numBlurbs">Number of Blurbs:</label><br>
+        <input type="number" id="numBlurbs" name="numBlurbs" min="1" onchange="createBlurbInputs()" required><br>
+        <div id="blurbInputs" ></div>
+        <div id="blurbAuthorInputs" ></div>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required><br>
+
+        <label for="authorImage">Author Image:</label><br>
+        <input type="file" id="authorImage" name="authorImage" required><br>
+
+        <label for="authorBday">Author birdthday:</label><br>
+        <input type="date" id="authorBday" name="authorBday" required><br>
+
+        <label for="authorCountry">Author country:</label><br>
+        <input type="text" id="authorCountry" name="authorCountry" required><br>
+
+        <label for="authorBio">Author Bio:</label><br>
+        <input type="text" id="authorBio" name="authorBio" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script src="addBook.js">
+    </script>
+</body>
+</html>

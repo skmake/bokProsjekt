@@ -1,0 +1,64 @@
+<!--
+Lag visninger som lar deg bla gjennom databasen basert på forfatter og sjanger
+Lag en visning for hver bok, som viser info om boken samt evt. blurbs. 
+Lag en visning for hver forfatter, som viser info og bilde om forfatter, samt en opplisting av alle bøkene til forfatteren (med lenke til visning om info om hver bok)
+Lag et skjema for å sette inn en bok i databasen, med en medfølgende rute i app.js som skriver dataen til databasen.
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/" id="Home">Hjem</a>
+        <form id="forfatter og sjanger">
+            <label for="forfatter">Velg Forfatter:</label>
+            <select name="forfatter" id="forfatter"></select>
+            <label for="forfatter">Velg Sjanger</label>
+            <select name="forfatter" id="sjanger" ></select>
+            <input type="submit" value="Submit" id="submit forfatter og sjanger">
+        </form>
+
+        <form id="sort">
+            <label for="sortOption">Sorter etter:</label>
+            <select name="sortOption" id="sortOption" >
+                <option value="title a-z">Bøker A-Z</option>
+                <option value="tilte z-a">Bøker Z-A</option>
+                <option value="author a-z">Forfatter A-Z</option>
+                <option value="author z-a">Forfatter Z-A</option>
+                <option value="pages ascending">Sider Økende</option>
+                <option value="pages descending">Sider Synkende</option>
+            </select>
+            <input type="submit" value="Submit" id="submit sort">
+        </form>
+
+        
+
+        
+        <label for="searchBar">Søk etter Bok eller Forfatter</label>
+        <input type="text" id="searchBar" placeholder="Jane Austen eller 1Q84">
+        
+        <button onclick="search()" id="forfatter og sjanger">  Søk  </button>
+        
+
+        <a href="addBook copy1.html" id="Home">Legg til Bøker</a>
+
+    </nav>
+
+    <div id="books">
+    </div>
+
+    <div id="booksdisplay"></div>
+
+    <script src="index.js"> </script>
+</body>
+</html>
